@@ -1,0 +1,59 @@
+#N canvas 0 0 814 693 10;
+#X obj 259 107 inlet;
+#X obj 259 519 outlet;
+#X obj 101 127 cnv 15 48 20 empty empty empty 15 11 0 14 -191407 -1
+0;
+#X obj 101 103 cnv 15 48 23 empty empty servo 4 13 0 14 -33289 -228856
+0;
+#X obj 259 200 demux 2 3 4 5 6 7 8 9 10 11 12 13;
+#X floatatom 454 162 5 0 0 0 - - -;
+#X obj 110 128 nbx 2 17 2 13 0 1 \$0-fakein \$0-fakeout empty 0 -8
+0 12 -262144 -1 -1 6 256;
+#X obj 454 111 inlet;
+#X obj 203 145 - 2;
+#X obj 101 103 cnv 1 48 1 empty empty empty 20 12 0 14 -149826 -66577
+0;
+#X obj 101 126 cnv 1 48 1 empty empty empty 20 12 0 14 -149826 -66577
+0;
+#X msg 259 282 analog 2 \$1;
+#X msg 269 302 analog 3 \$1;
+#X msg 279 322 analog 4 \$1;
+#X msg 289 342 analog 5 \$1;
+#X msg 299 362 analog 6 \$1;
+#X msg 309 382 analog 7 \$1;
+#X msg 319 402 analog 8 \$1;
+#X msg 329 422 analog 9 \$1;
+#X msg 339 442 analog 10 \$1;
+#X msg 349 462 analog 11 \$1;
+#X msg 359 482 analog 12 \$1;
+#X msg 369 502 analog 13 \$1;
+#X connect 0 0 4 0;
+#X connect 4 0 11 0;
+#X connect 4 1 12 0;
+#X connect 4 2 13 0;
+#X connect 4 3 14 0;
+#X connect 4 4 15 0;
+#X connect 4 5 16 0;
+#X connect 4 6 17 0;
+#X connect 4 7 18 0;
+#X connect 4 8 19 0;
+#X connect 4 9 20 0;
+#X connect 4 10 21 0;
+#X connect 4 11 22 0;
+#X connect 5 0 4 1;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 8 0 5 0;
+#X connect 11 0 1 0;
+#X connect 12 0 1 0;
+#X connect 13 0 1 0;
+#X connect 14 0 1 0;
+#X connect 15 0 1 0;
+#X connect 16 0 1 0;
+#X connect 17 0 1 0;
+#X connect 18 0 1 0;
+#X connect 19 0 1 0;
+#X connect 20 0 1 0;
+#X connect 21 0 1 0;
+#X connect 22 0 1 0;
+#X coords 0 -1 1 1 50 50 2 100 100;

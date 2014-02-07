@@ -1,0 +1,59 @@
+#N canvas 0 0 956 660 10;
+#X obj 249 107 inlet;
+#X obj 249 509 outlet;
+#X obj 101 127 cnv 15 48 20 empty empty empty 15 11 0 14 -191407 -1
+0;
+#X obj 101 103 cnv 15 48 23 empty empty d-Out 4 13 0 14 -33289 -228856
+0;
+#X msg 259 292 digital 3 \$1;
+#X msg 269 312 digital 4 \$1;
+#X msg 249 272 digital 2 \$1;
+#X msg 279 332 digital 5 \$1;
+#X msg 289 352 digital 6 \$1;
+#X msg 299 372 digital 7 \$1;
+#X msg 309 392 digital 8 \$1;
+#X msg 319 412 digital 9 \$1;
+#X msg 329 432 digital 10 \$1;
+#X msg 339 452 digital 11 \$1;
+#X msg 349 472 digital 12 \$1;
+#X msg 359 492 digital 13 \$1;
+#X obj 249 190 demux 2 3 4 5 6 7 8 9 10 11 12 13;
+#X floatatom 444 162 5 0 0 0 - - -;
+#X obj 110 128 nbx 2 17 2 13 0 1 \$0-fakein \$0-fakeout empty 0 -8
+0 12 -262144 -1 -1 13 256;
+#X obj 444 111 inlet;
+#X obj 193 145 - 2;
+#X obj 101 103 cnv 1 48 1 empty empty empty 20 12 0 14 -6268 -66577
+0;
+#X obj 101 126 cnv 1 48 1 empty empty empty 20 12 0 14 -6268 -66577
+0;
+#X connect 0 0 16 0;
+#X connect 4 0 1 0;
+#X connect 5 0 1 0;
+#X connect 6 0 1 0;
+#X connect 7 0 1 0;
+#X connect 8 0 1 0;
+#X connect 9 0 1 0;
+#X connect 10 0 1 0;
+#X connect 11 0 1 0;
+#X connect 12 0 1 0;
+#X connect 13 0 1 0;
+#X connect 14 0 1 0;
+#X connect 15 0 1 0;
+#X connect 16 0 6 0;
+#X connect 16 1 4 0;
+#X connect 16 2 5 0;
+#X connect 16 3 7 0;
+#X connect 16 4 8 0;
+#X connect 16 5 9 0;
+#X connect 16 6 10 0;
+#X connect 16 7 11 0;
+#X connect 16 8 12 0;
+#X connect 16 9 13 0;
+#X connect 16 10 14 0;
+#X connect 16 11 15 0;
+#X connect 17 0 16 1;
+#X connect 18 0 20 0;
+#X connect 19 0 18 0;
+#X connect 20 0 17 0;
+#X coords 0 -1 1 1 50 50 2 100 100;
