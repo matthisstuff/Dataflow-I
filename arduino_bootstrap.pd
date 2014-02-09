@@ -1,0 +1,22 @@
+#N canvas 296 217 781 415 10;
+#X obj 552 181 arduino;
+#X msg 627 161 devices;
+#X obj 552 161 r arduinoIn;
+#X obj 552 201 s arduinoOut;
+#X msg 724 161 open 2;
+#X obj 322 2 arduino_setup;
+#X obj 322 157 s arduinoIn;
+#X obj 551 241 print;
+#X obj 597 221 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 551 221 spigot;
+#X msg 681 161 close;
+#X connect 0 0 3 0;
+#X connect 0 0 9 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 6 0;
+#X connect 8 0 9 1;
+#X connect 9 0 7 0;
+#X connect 10 0 0 0;
