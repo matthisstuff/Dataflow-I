@@ -1,14 +1,12 @@
-#N canvas 1296 22 995 665 16;
+#N canvas 16 22 1026 667 16;
 #X obj 561 39 +;
 #X obj 620 39 -;
 #X obj 560 84 *;
 #X obj 620 84 /;
 #X text 675 50 simple arithmetric objects;
 #X obj 230 19 print;
-#X text 227 43 send output to console;
 #X obj 46 183 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X text 41 202 [bng] send a bang (intiate action);
 #X obj 223 182 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 131 18 +;
@@ -18,8 +16,6 @@
 #X floatatom 131 134 5 0 0 0 - - -;
 #X obj 19 485 t b b;
 #X obj 19 516 trigger b b;
-#X text 16 565 trigger input in a predefined output order (always right
-to left);
 #X text 122 542 first;
 #X text 15 540 last;
 #X obj 352 510 spigot;
@@ -35,8 +31,6 @@ to left);
 #X obj 747 181 float;
 #X obj 747 222 f;
 #X text 744 253 Value storage for numbers;
-#X text 792 135 cold inlet will remember input;
-#X text 614 132 hot inlet will remember input *and* output!;
 #X msg 358 20 hello pd;
 #X obj 358 115 print;
 #X text 365 64 cables connect things;
@@ -49,13 +43,20 @@ to left);
 #X floatatom 444 295 5 0 0 0 - - -;
 #X floatatom 471 324 5 0 0 0 - - -;
 #X floatatom 444 411 5 0 0 0 - - -;
-#X text 492 355 cold inlet will only change internal state;
-#X text 333 327 hot inlet will process inputs and output result;
-#X text 218 204 [tgl] or [toggle] output 1 (selected) or 0 (unselected)
+#X text 41 202 [bng] send a bang \; (intiate action);
+#X text 218 204 [tgl] or [toggle] \; output 1 (selected) or 0 (unselected)
 ;
-#X connect 24 0 40 0;
-#X connect 27 0 39 0;
-#X connect 33 0 34 0;
-#X connect 41 0 44 0;
-#X connect 42 0 41 0;
-#X connect 43 0 41 1;
+#X text 614 132 hot inlet will \; remember input \; *and* output!;
+#X text 792 135 cold inlet \; will remember input;
+#X text 333 327 hot inlet \; will process \; inputs and \; output result
+;
+#X text 492 355 cold inlet \; will only change internal state;
+#X text 16 565 trigger input in a \; predefined output order \; (always
+right to left);
+#X text 227 43 send output \; to the console;
+#X connect 21 0 35 0;
+#X connect 24 0 34 0;
+#X connect 28 0 29 0;
+#X connect 36 0 39 0;
+#X connect 37 0 36 0;
+#X connect 38 0 36 1;
