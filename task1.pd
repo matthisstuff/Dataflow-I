@@ -1,0 +1,7 @@
+#N canvas 2046 32 243 186 16;
+#X text 12 6 TASK 1 \; Build a simple counter;
+#X obj 170 65 float;
+#X obj 117 65 + 1;
+#X obj 17 69 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 48 66 5 0 0 0 - - -;

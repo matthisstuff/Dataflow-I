@@ -1,0 +1,25 @@
+#N canvas 0 22 107 157 16;
+#N canvas 513 230 450 300 test 0;
+#X obj 40 25 inlet;
+#X obj 40 127 f;
+#X obj 98 128 + 1;
+#X obj 40 165 outlet;
+#X msg 118 84 0;
+#X obj 40 55 route bang reset;
+#X obj 202 103 nbx 3 24 -1e+37 1e+37 0 0 \$0-hides \$0-hider empty
+0 -8 0 16 -261682 -1 -1 0 256;
+#X connect 0 0 5 0;
+#X connect 1 0 2 0;
+#X connect 1 0 3 0;
+#X connect 1 0 6 0;
+#X connect 2 0 1 1;
+#X connect 4 0 1 0;
+#X connect 5 0 1 0;
+#X connect 5 1 4 0;
+#X coords 0 -1 1 1 60 30 2 200 100;
+#X restore 21 97 pd test;
+#X obj 21 16 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 30 39 reset;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;

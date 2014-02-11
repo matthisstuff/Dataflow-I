@@ -1,0 +1,13 @@
+#N canvas 1310 363 450 300 16;
+#X text -34 5 TASK 3 \; Build a simple sequencer with 5 different tones
+\; using either a random number generator [random] or \; a counter
+;
+#X obj -33 122 osc~;
+#X obj -33 157 mtof;
+#X obj -32 191 dac~;
+#X obj -32 225 metro;
+#X obj -34 95 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 33 122 oscillator;
+#X text 35 156 midi tone to frequency converter;
+#X text 33 191 "speaker" output;

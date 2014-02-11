@@ -1,0 +1,6 @@
+#N canvas 1591 31 450 300 16;
+#X text 8 4 TASK 2 \; Based on your counter from task 1 \; modify it
+to only count from 20 to 80 \; in steps of 10;
+#X obj 37 162 select;
+#X text 120 151 you will need the [select] element \; find out how
+to use it;

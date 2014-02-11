@@ -1,0 +1,23 @@
+#N canvas 1843 245 461 346 16;
+#X obj 50 119 f;
+#X obj 106 119 + 10;
+#X msg 77 78 20;
+#X obj 49 32 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 149 78 sel 80;
+#X floatatom 117 208 5 0 0 0 - - -;
+#X obj 50 169 t f f f;
+#X text 126 8 This counter is always \; counting from 20 to 80 \; in
+increments of 10;
+#X text 136 167 execution order is important here!;
+#X text 217 190 1 output the number to \; the number box;
+#X text 217 229 2 increment the value \; with + 10;
+#X text 217 267 3 check if we already \; reached 80;
+#X connect 0 0 6 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 1;
+#X connect 3 0 0 0;
+#X connect 4 0 2 0;
+#X connect 6 0 4 0;
+#X connect 6 1 1 0;
+#X connect 6 2 5 0;
