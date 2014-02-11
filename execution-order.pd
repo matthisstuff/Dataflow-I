@@ -1,0 +1,55 @@
+#N canvas 1412 22 821 614 16;
+#X text 3 3 WHY EXECUTION ORDER MATTERS;
+#X obj 15 111 f;
+#X obj 65 142 + 1;
+#X obj 44 176 sel 5;
+#X msg 141 142 1;
+#X obj 15 83 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 15 219 5 0 0 0 - - -;
+#X obj 235 115 f;
+#X obj 285 146 + 1;
+#X obj 264 180 sel 5;
+#X msg 361 146 1;
+#X obj 235 87 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 235 223 5 0 0 0 - - -;
+#X text 436 138 Same patch different output.;
+#X text 436 162 How can this happen;
+#X text 10 338 SOLUTION;
+#X obj 19 403 f;
+#X obj 130 438 + 1;
+#X obj 129 485 sel 5;
+#X msg 252 439 1;
+#X obj 19 375 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 19 545 5 0 0 0 - - -;
+#X obj 19 438 t f f;
+#X text 323 407 The trigger will output the number from the float \;
+from right to left. \; First the calculation is done \; Then the select
+is being passed the number \; \; The select will now overwrite the
+calculation result when \; we reach 5;
+#X text 12 261 not working;
+#X text 233 260 working;
+#X connect 1 0 6 0;
+#X connect 1 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 1 1;
+#X connect 3 0 4 0;
+#X connect 4 0 1 1;
+#X connect 5 0 1 0;
+#X connect 7 0 12 0;
+#X connect 7 0 8 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 1;
+#X connect 9 0 10 0;
+#X connect 10 0 7 1;
+#X connect 11 0 7 0;
+#X connect 16 0 21 0;
+#X connect 16 0 22 0;
+#X connect 17 0 16 1;
+#X connect 18 0 19 0;
+#X connect 19 0 16 1;
+#X connect 20 0 16 0;
+#X connect 22 0 18 0;
+#X connect 22 1 17 0;
