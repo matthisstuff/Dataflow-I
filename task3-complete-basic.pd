@@ -29,7 +29,6 @@
 #X msg 157 105 1;
 #X text 197 105 reset on 5;
 #X obj 33 94 metro 250;
-#X text 191 163;
 #X text 98 159 *always* use a trigger when execution order matters!
 ;
 #X connect 1 0 17 0;
