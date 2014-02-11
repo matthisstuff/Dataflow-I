@@ -1,0 +1,67 @@
+#N canvas 302 54 898 534 16;
+#X obj 26 89 metro;
+#X obj 26 119 bng 15 50 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 90 88 Metronome object;
+#X text 24 134 outputs bangs in a certain interval;
+#X obj 26 15 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X text 51 9 1/0 for on and off;
+#X floatatom 73 52 5 0 0 0 - - -;
+#X text 394 10 Lists are messages with two or more symbols or number
+;
+#X obj 398 160 print;
+#X msg 398 74 i am a list;
+#X text 534 73 list with 4 symbols;
+#X msg 406 107 1 mixed list;
+#X text 543 105 list with 1 number and 2 symbols;
+#X text 396 200 lists can be assembled using the [pack] object;
+#X obj 405 263 pack f f;
+#X msg 405 229 1;
+#X msg 482 229 2;
+#X obj 405 297 print;
+#X text 400 350 The reversal of [pack] is called [unpack] \, it takes
+a list apart;
+#X msg 406 404 1 2 3 4;
+#X floatatom 406 474 2 0 0 0 - - -;
+#X floatatom 451 474 2 0 0 0 - - -;
+#X floatatom 497 474 2 0 0 0 - - -;
+#X floatatom 543 474 2 0 0 0 - - -;
+#X obj 406 442 unpack f f f f;
+#X obj 29 423 line;
+#X obj 32 494 hsl 128 15 0 2 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 29 286 2 2000;
+#X text 103 284 go to 2 in 2 seconds (2000ms);
+#X msg 48 315 stop;
+#X text 102 314 stop right where you are;
+#X msg 58 346 0;
+#X text 103 345 set to zero immediately;
+#X msg 62 378 set 1;
+#X text 38 450 floating point number are coming out here;
+#X text 126 375 set to one but \; don't output a change;
+#X text 563 428 like [pack] \, [unpack] wants to know \; how many items
+of which type to unpack;
+#X text 502 258 pack wants to know how many items \; and which type
+it has to assemble \; f = number \, s = symbol;
+#X text 130 42 time between two bangs \; in ms (1s = 1000ms);
+#X text 24 221 The [line] object generates a smooth \; transition from
+one number to another. \; [line] takes a list as input;
+#X connect 0 0 1 0;
+#X connect 4 0 0 0;
+#X connect 6 0 0 1;
+#X connect 9 0 8 0;
+#X connect 11 0 8 0;
+#X connect 14 0 17 0;
+#X connect 15 0 14 0;
+#X connect 16 0 14 1;
+#X connect 19 0 24 0;
+#X connect 24 0 20 0;
+#X connect 24 1 21 0;
+#X connect 24 2 22 0;
+#X connect 24 3 23 0;
+#X connect 25 0 26 0;
+#X connect 27 0 25 0;
+#X connect 29 0 25 0;
+#X connect 31 0 25 0;
+#X connect 33 0 25 0;
