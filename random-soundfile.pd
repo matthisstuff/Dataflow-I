@@ -1,0 +1,42 @@
+#N canvas 1821 34 478 532 16;
+#X obj 45 307 readsf~;
+#X obj 43 68 openpanel;
+#X obj 43 36 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 44 214 open \$1;
+#X obj 46 373 dac~;
+#X msg 70 266 1;
+#X obj 44 126 symbol;
+#X obj 211 118 symbol;
+#X obj 211 73 openpanel;
+#X obj 211 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 184 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 15 110 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 301 269 random 2;
+#X obj 163 281 t b b;
+#X obj 301 304 select 0 1;
+#X text 279 332 randomly chose between \; out two soundfiles (0 and
+1);
+#X text 281 107 Storgae for a symbol \; (piece of text);
+#X text 98 331 bang when soundfiles \; reached its end;
+#X connect 0 0 4 0;
+#X connect 0 0 4 1;
+#X connect 0 1 13 0;
+#X connect 1 0 6 0;
+#X connect 2 0 1 0;
+#X connect 3 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 3 0;
+#X connect 7 0 3 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 7 0;
+#X connect 11 0 6 0;
+#X connect 12 0 14 0;
+#X connect 13 0 5 0;
+#X connect 13 1 12 0;
+#X connect 14 0 11 0;
+#X connect 14 1 10 0;
