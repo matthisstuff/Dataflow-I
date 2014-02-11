@@ -1,0 +1,13 @@
+#N canvas 1319 239 491 300 16;
+#X obj 19 87 line~;
+#X obj 19 55 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 21 231 *~;
+#X msg 18 128 goto duration;
+#X text 160 50 [hsl] your friendly horizontal slider;
+#X text 83 86 The line~ object for creating smooth transition;
+#X text 183 125 control message for the line~ \; a list with two number
+\, \; value to go to and duration in ms;
+#X text 66 231 audio signal multiplication (between 0 and 1);
+#X text 16 155 use the \$1 to \; dynamically set \; the goto;
+#X text 8 4 TASK 4 \; Create a fancy volume control;
