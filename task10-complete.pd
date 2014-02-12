@@ -1,4 +1,4 @@
-#N canvas 0 22 537 428 16;
+#N canvas 0 22 537 508 16;
 #X obj 26 -20 f;
 #X obj 92 -19 + 1;
 #X msg 53 -55 0;
@@ -6,23 +6,23 @@
 #X obj 26 -125 metro 500;
 #X obj 26 -162 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 26 91 random 10;
-#X floatatom 26 133 5 0 0 0 - - -;
-#X floatatom 115 132 5 0 0 0 - - -;
-#X obj 95 52 sel 19;
-#X obj 26 185 tabwrite random-numbers;
+#X obj 26 131 random 10;
+#X floatatom 26 173 5 0 0 0 - - -;
+#X floatatom 115 172 5 0 0 0 - - -;
+#X obj 95 72 sel 19;
+#X obj 26 255 tabwrite random-numbers;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array random-numbers 20 float 3;
-#A 0 0 6 1 6 1 4 5 8 5 9 8 4 2 8 8 8 3 2 1 2;
+#A 0 3 3 4 7 8 4 9 1 6 3 5 6 0 0 4 4 8 3 1 7;
 #X coords 0 9 20 0 200 140 1 0 0;
 #X restore 314 -150 graph;
-#X text 252 140 cold inlet will only set the index \; but not write
+#X text 252 210 cold inlet will only set the index \; but not write
 any data;
 #X text 110 7 synchronize the index and value \, first set index \,
 \; then trigger the value;
-#X text 165 48 arrays start at 0 \, so we have to cut off \; at 19
+#X text 165 68 arrays start at 0 \, so we have to cut off \; at 19
 for an array length of 20;
-#X text 127 90 random numbers between 0 and 9;
+#X text 127 130 random numbers between 0 and 9;
 #X connect 0 0 3 0;
 #X connect 1 0 0 1;
 #X connect 2 0 0 1;
