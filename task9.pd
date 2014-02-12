@@ -1,0 +1,8 @@
+#N canvas 264 133 473 216 16;
+#X text 9 6 TASK 9;
+#X text 11 32 using your newly created subpatch and abstraction \,
+\; build a simple sequencer that can load three different \; audio
+files. Control the playback using a counter which \; counts from 3
+to 1 and triggers the right player. \; \; Also create a global volume
+control using your volume \; control abstraction. \; \; We are counting
+down this time!;
