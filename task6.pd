@@ -1,0 +1,3 @@
+#N canvas 1356 147 388 78 16;
+#X text 10 3 TASK 6;
+#X text 12 34 Create a soundfile player as subpatch;
