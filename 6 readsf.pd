@@ -1,0 +1,37 @@
+#N canvas 157 59 452 523 16;
+#X text 7 5 The [readsf~] object can be used to open and playback \;
+soundfiles;
+#X obj 23 315 readsf~;
+#X obj 24 379 dac~;
+#X obj 90 351 bng 20 250 50 0 empty empty empty 17 7 0 10 -262144 -258113
+-1;
+#X text 122 349 The bang will be triggered \; when the soundfiles finished.
+;
+#X obj 23 60 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 23 221 open \$1;
+#X msg 45 254 start;
+#X msg 68 282 stop;
+#X text 123 252 send the message "start" or 1 to play;
+#X text 123 280 send the message "stop" or 0 to stop;
+#X text 121 220 [readsf~] wants to know the filename;
+#X obj 23 93 openpanel;
+#X text 122 90 [openpanel] is used to select the file \; from your
+harddisk;
+#X obj 23 142 symbol;
+#X text 124 140 just like [float] stores a number \, \; [symbol] can
+store a symbol \; (the soundfile name);
+#X obj 24 432 cnv 15 400 60 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X text 26 434 When [readsf~] finished playback \, it will forget \;
+about the soundfile. You have to send the open \; message again if
+you want to play again!;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 1 1 3 0;
+#X connect 5 0 12 0;
+#X connect 6 0 1 0;
+#X connect 7 0 1 0;
+#X connect 8 0 1 0;
+#X connect 12 0 14 0;
+#X connect 14 0 6 0;

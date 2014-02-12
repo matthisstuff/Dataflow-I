@@ -1,0 +1,17 @@
+#N canvas 0 22 761 329 16;
+#X obj 45 60 inlet operand1;
+#X obj 299 59 inlet operand2;
+#X text 44 23 inlets are created using the [inlet] object;
+#X text 449 42 inlets can have an optional \; name you can use to \;
+note what it is used for.;
+#X obj 214 215 *;
+#X obj 214 272 outlet;
+#X text 295 269 outlets are created using the \; [outlet] object.;
+#X text 33 358 There are also inlets and outlets for audio data \;
+those are called [inlet~] and [outlet~];
+#X text 41 119 inlets and outlets show up on the subpatch object \;
+from left to right in the order they are placed \; in the subpatch
+;
+#X connect 0 0 4 0;
+#X connect 1 0 4 1;
+#X connect 4 0 5 0;

@@ -1,0 +1,27 @@
+#N canvas 242 214 652 511 16;
+#X text -62 3 Send and receive;
+#X obj -58 157 send myname;
+#X text 94 123 send object that will send data to \; any receive named
+"myname";
+#X obj -60 236 receive myname;
+#X symbolatom -60 271 15 0 0 0 - - -;
+#X text 118 243 This receive will receive data sent \; to "myname"
+;
+#X msg -58 114 symbol hello;
+#X obj -57 408 receive myname;
+#X text 147 339 You can have multiple sends and \; receives in your
+patch;
+#X obj -58 364 send myname;
+#X symbolatom -57 442 15 0 0 0 - - -;
+#X msg -58 322 symbol hello-again;
+#X obj 147 425 cnv 15 350 60 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X text 157 425 send and receive will act on any patch \; you have
+open so be careful when chosing \; your names;
+#X text -64 26 [send] is used to send control data to one or more \;
+[receive] objects [send] and [receive] are given names \; as creation
+arguments.;
+#X connect 3 0 4 0;
+#X connect 6 0 1 0;
+#X connect 7 0 10 0;
+#X connect 11 0 9 0;
