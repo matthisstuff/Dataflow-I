@@ -1,0 +1,5 @@
+#N canvas 1870 31 438 114 16;
+#X text 7 7 TASK 10;
+#X text 9 38 Use a counter connected to a metronome to fill the \;
+array with random numbers. When you reach the end \; of the array start
+again at index 0;
