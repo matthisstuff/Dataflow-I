@@ -1,0 +1,5 @@
+#N canvas 1301 37 433 130 16;
+#X text 7 3 TASK 8;
+#X text 10 30 Create an abstraction out of your volume control \; slider
+and use its graph on parent feature too. \; Include the volume control
+abstraction in you \; subpatch.;
