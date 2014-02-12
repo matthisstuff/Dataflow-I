@@ -1,6 +1,5 @@
 #N canvas 17 177 1133 438 16;
-#X text 7 5 Subpatches and abstractions;
-#X text 8 27 Subpatches are self contained parts of your patch that
+#X text 8 37 Subpatches are self contained parts of your patch that
 \; have their own canvas and use inlets and outlets to \; receive or
 send data to its parent patch. \; Subpatches also can contain subpatches!
 ;
@@ -21,36 +20,37 @@ from left to right in the order they are placed \; in the subpatch
 #X connect 0 0 4 0;
 #X connect 1 0 4 1;
 #X connect 4 0 5 0;
-#X restore 18 155 pd my-sub-patch;
-#X text 209 153 subpatches are created by making \; an object that
+#X restore 18 165 pd my-sub-patch;
+#X text 209 163 subpatches are created by making \; an object that
 is called "pd" and \; supply the subpatch name as \; creation argument
 ;
 #X floatatom 18 119 5 0 0 0 - - -;
-#X floatatom 165 121 5 0 0 0 - - -;
+#X floatatom 165 131 5 0 0 0 - - -;
 #X floatatom 18 191 5 0 0 0 - - -;
-#X text 16 245 Subpatches are saved in your main patch file. \; If
+#X text 16 255 Subpatches are saved in your main patch file. \; If
 you change one subpatch all other subpatches \; in you patch wont change.
 ;
-#X text 557 23 To create reusable components you can use an abstraction.
+#X text 557 33 To create reusable components you can use an abstraction.
 \; Abstraction work like subpatches but they are saved to \; their
 own file;
-#X text 558 92 To create an asbtraction you have to save its file to
-the \; same directory as the patch that wants to use it.;
-#X obj 565 231 my-abstraction;
-#X text 723 226 This is that same as the subpatch \; but saved as an
+#X text 558 102 To create an asbtraction you have to save its file
+to the \; same directory as the patch that wants to use it.;
+#X obj 565 241 my-abstraction;
+#X text 723 236 This is that same as the subpatch \; but saved as an
 abstraction;
-#X text 559 144 The file name of the abstraction becomes the object
+#X text 559 154 The file name of the abstraction becomes the object
 name \; you can use to create an instance of the abstraction;
-#X obj 560 315 cnv 15 460 50 empty empty empty 20 12 0 14 -261234 -66577
+#X obj 560 325 cnv 15 460 50 empty empty empty 20 12 0 14 -261234 -66577
 0;
-#X text 565 320 If you change the abstraction all of its instances
+#X text 565 330 If you change the abstraction all of its instances
 will \; change too. This is different to subpatches!;
-#X floatatom 565 197 5 0 0 0 - - -;
-#X floatatom 702 199 5 0 0 0 - - -;
-#X floatatom 565 267 5 0 0 0 - - -;
-#X connect 2 0 6 0;
-#X connect 4 0 2 0;
-#X connect 5 0 2 1;
-#X connect 10 0 17 0;
-#X connect 15 0 10 0;
-#X connect 16 0 10 1;
+#X floatatom 565 207 5 0 0 0 - - -;
+#X floatatom 702 209 5 0 0 0 - - -;
+#X floatatom 565 277 5 0 0 0 - - -;
+#X text 7 5 SUBPATCHES AND ABSTRACTIONS;
+#X connect 1 0 5 0;
+#X connect 3 0 1 0;
+#X connect 4 0 1 1;
+#X connect 9 0 16 0;
+#X connect 14 0 9 0;
+#X connect 15 0 9 1;
