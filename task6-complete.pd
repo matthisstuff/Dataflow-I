@@ -15,6 +15,8 @@
 #X obj 204 76 inlet start;
 #X obj 43 317 outlet~;
 #X obj 110 249 outlet;
+#X text 166 156 send open filename \; and start message \; at the same
+time;
 #X connect 0 0 6 0;
 #X connect 0 1 7 0;
 #X connect 1 0 2 0;
