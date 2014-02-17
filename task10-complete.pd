@@ -1,4 +1,4 @@
-#N canvas 0 22 537 508 16;
+#N canvas 1290 42 537 508 16;
 #X obj 26 -20 f;
 #X obj 92 -19 + 1;
 #X msg 53 -55 0;
@@ -13,7 +13,7 @@
 #X obj 26 255 tabwrite random-numbers;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array random-numbers 20 float 3;
-#A 0 3 3 4 7 8 4 9 1 6 3 5 6 0 0 4 4 8 3 1 7;
+#A 0 1 6 4 7 8 0 2 7 3 2 9 3 2 6 9 4 0 9 2 5;
 #X coords 0 9 20 0 200 140 1 0 0;
 #X restore 314 -150 graph;
 #X text 252 210 cold inlet will only set the index \; but not write
