@@ -1,0 +1,30 @@
+#N canvas 69 196 475 352 16;
+#X obj -40 195 adc~ 1;
+#X obj 102 104 bng 15 250 50 0 empty empty record 20 7 0 10 -262144
+-1 -1;
+#X obj -48 27 inlet length;
+#X msg -48 86 resize \$1;
+#X obj 102 193 outlet~;
+#X obj 309 287 outlet;
+#X obj 102 122 bng 15 250 50 0 empty empty play 20 7 0 10 -262144 -1
+-1;
+#X obj 102 141 volume-control;
+#X obj 166 256 tabplay~ \$0-recording;
+#X obj -48 -3 table \$0-recording;
+#X obj -48 116 s \$0-recording;
+#X obj -40 228 tabwrite~ \$0-recording;
+#X msg 148 26 2;
+#X obj 148 -2 loadbang;
+#X obj -48 57 * 44100;
+#X connect 0 0 11 0;
+#X connect 1 0 11 0;
+#X connect 2 0 14 0;
+#X connect 3 0 10 0;
+#X connect 6 0 8 0;
+#X connect 7 0 4 0;
+#X connect 8 0 7 0;
+#X connect 8 1 5 0;
+#X connect 12 0 14 0;
+#X connect 13 0 12 0;
+#X connect 14 0 3 0;
+#X coords 0 -1 1 1 140 85 2 100 100;
