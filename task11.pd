@@ -1,8 +1,8 @@
-#N canvas 1844 449 445 156 16;
+#N canvas 1857 22 445 156 16;
 #X text 4 4 TASK 11;
 #X text 7 31 Create an audio recorder object using an array \, a \;
 [tabwrite~] and a [tabplay~]. Create a GUI fot it \, \; which lets
 you start recording and playback.;
 #X obj 12 113 tabwrite~;
 #X obj 119 113 tabplay~;
-#X obj 217 114 table recording;
+#X obj 217 114 table \$0-recording;

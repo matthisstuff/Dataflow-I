@@ -1,5 +1,5 @@
-#N canvas 534 198 189 181 16;
-#X obj 23 136 dac~;
-#X obj 23 27 audio-recorder;
+#N canvas 1442 251 187 168 16;
+#X obj 23 128 dac~;
+#X obj 23 19 audio-recorder;
 #X connect 1 0 0 0;
 #X connect 1 0 0 1;
