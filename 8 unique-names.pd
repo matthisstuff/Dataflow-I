@@ -1,0 +1,16 @@
+#N canvas 1855 401 450 300 16;
+#X text -30 20 The \$0 can be used to create unqiue names \; For example
+it can be used to create a unique \; name for a table.;
+#X obj -26 119 f \$0;
+#X floatatom -26 150 5 0 0 0 - - -;
+#X obj -26 95 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 43 152 The output will be different \; each time you reopen
+the patch.;
+#X obj -26 206 table my-table-\$0;
+#X obj -26 239 table \$0-my-table;
+#X text 159 215 The position of the \$0 \; doesn't matter.;
+#X text 44 109 The \$0 can be stored just like any \; other number
+;
+#X connect 1 0 2 0;
+#X connect 3 0 1 0;
