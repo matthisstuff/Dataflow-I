@@ -1,0 +1,78 @@
+#N canvas 1036 71 593 793 10;
+#X obj 17 18 cnv 1 540 1 empty empty empty 20 12 0 14 -1 -66577 0;
+#X obj 36 29 *~;
+#X obj 66 29 +~;
+#X obj 66 49 -~;
+#X obj 36 49 /~;
+#X obj 36 69 pow~;
+#X obj 66 69 sqrt~;
+#X obj 17 98 cnv 1 540 1 empty empty empty 20 12 0 14 -1 -66577 0;
+#X text 193 35 You can do calculations with audio \, just as with messages.
+So you can scale and modulate signals.;
+#X obj 36 119 osc~ 440;
+#X obj 36 199 dac~;
+#X obj 36 169 *~;
+#X obj 54 146 hsl 80 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 17 408 cnv 1 540 1 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 36 459 osc~ 440;
+#X obj 62 487 *~;
+#X obj 36 519 output~;
+#X floatatom 36 431 5 0 0 0 - - -;
+#X floatatom 96 431 5 0 0 0 - - -;
+#X obj 17 581 cnv 1 540 1 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 96 459 osc~ 0.5;
+#X text 193 465 But as well you could manipulate the amplitude with
+another signal generator. Which produces a periodic fading in and out
+of the sound. Interesting artefacts arise when you increase the speed
+of the modulating signal.;
+#X obj 36 639 osc~ 440;
+#X obj 57 667 *~;
+#X obj 36 699 output~;
+#X floatatom 36 611 5 0 0 0 - - -;
+#X obj 96 639 adc~ 1;
+#X obj 17 238 cnv 1 540 1 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 36 289 osc~ 440;
+#X obj 36 327 *~;
+#X floatatom 36 261 5 0 0 0 - - -;
+#X obj 96 289 line~;
+#X msg 96 260 1 \, 0 100;
+#X obj 36 367 dac~;
+#X text 193 125 The thing you will probably see/use the most (in terms
+of audio-calculation) is modulating amplitudes. Like you allready learned
+\, you can make signals louder or quiter by multiplying them with numbers
+between 0 and 1 manually.;
+#X obj 17 761 cnv 1 540 1 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X text 193 295 With the [line~] object you can apply fades or build
+triggerable envelopes. See also [vline~] \, which holds advanced possibilities
+and precision \, but is also more expensive for your cpu.;
+#X text 193 635 Or even modulate the amplitude with your microphone
+input. What you´re doing here is called ring-modulation.;
+#X text 152 260 click here;
+#X text 74 145 volume;
+#X text 129 429 drag here;
+#X connect 9 0 11 0;
+#X connect 11 0 10 0;
+#X connect 11 0 10 1;
+#X connect 12 0 11 1;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 15 0 16 1;
+#X connect 17 0 14 0;
+#X connect 18 0 20 0;
+#X connect 20 0 15 1;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 23 0 24 1;
+#X connect 25 0 22 0;
+#X connect 26 0 23 1;
+#X connect 28 0 29 0;
+#X connect 29 0 33 0;
+#X connect 29 0 33 1;
+#X connect 30 0 28 0;
+#X connect 31 0 29 1;
+#X connect 32 0 31 0;

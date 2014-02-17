@@ -1,0 +1,35 @@
+#N canvas 1158 56 570 460 10;
+#X text 116 36 ...;
+#X obj 34 33 dac~ 1 2 3 4;
+#X text 116 126 ...;
+#X obj 34 123 adc~ 1 2 3 4;
+#X text 183 110 The other way around \, to get access to the signal
+of your microphone \, there is the analog-digital-converter. Again
+\, you can specify the number of channels \, according to how many
+inputs your soundcard provides.;
+#X obj 34 213 osc~;
+#X obj 84 213 phasor~;
+#X obj 84 243 square~;
+#X obj 34 243 noise~;
+#X text 183 20 To send audio to your soundcard/speakers there is the
+digital-analog-converter. By its arguments you can specify as many
+channels as you want \, according to the number of outputs of your
+hardware.;
+#X obj 7 8 cnv 1 540 1 empty empty empty 20 12 0 14 -1 -66577 0;
+#X obj 7 94 cnv 1 540 1 empty empty empty 20 12 0 14 -1 -66577 0;
+#X obj 7 184 cnv 1 540 1 empty empty empty 20 12 0 14 -1 -66577 0;
+#X obj 7 284 cnv 1 540 1 empty empty empty 20 12 0 14 -1 -66577 0;
+#X obj 34 313 lop~;
+#X obj 64 313 hip~;
+#X obj 34 333 bp~;
+#X obj 34 363 freeverb~;
+#X obj 34 383 limiter~;
+#X obj 64 333 moog~;
+#X text 180 331 Other objects serve as signal modulators. So you can
+alter your sounds. Some basic filters and effects are included in pd-extended
+\, but there are more to find on the internet. Of course you can build
+your own stuff \, too.;
+#X obj 7 434 cnv 1 540 1 empty empty empty 20 12 0 14 -1 -66577 0;
+#X text 180 216 Some objects are only signal sources \, they produce
+sound continuously. You can build synthesizers with them or use them
+to control things. Ouput ranges between -1 and 1;

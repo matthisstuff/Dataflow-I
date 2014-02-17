@@ -1,0 +1,62 @@
+#N canvas 695 1 594 582 10;
+#X obj 27 28 cnv 1 540 1 empty empty empty 20 12 0 14 -1 -66577 0;
+#X obj 45 167 readsf~;
+#X obj 45 77 openpanel;
+#X obj 45 47 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 45 217 *~;
+#X obj 101 201 osc~ 1;
+#X floatatom 101 167 5 0 0 0 - - -;
+#X obj 45 247 output~;
+#X msg 45 139 open \$1 \, 1;
+#X text 64 44 open a soundfile;
+#X text 135 164 mod-speed;
+#X obj 45 107 symbol;
+#X text 186 85 Nothing stops you from using soundfiles the same way.
+They consist of numbers \, just like a sine wave and everything else
+in audio land.;
+#X obj 27 308 cnv 1 540 1 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 45 447 readsf~;
+#X obj 45 357 openpanel;
+#X obj 45 327 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 45 497 *~;
+#X obj 45 527 output~;
+#X msg 45 419 open \$1 \, 1;
+#X text 64 324 open a soundfile;
+#X obj 45 387 symbol;
+#X obj 185 447 readsf~;
+#X obj 185 357 openpanel;
+#X obj 185 327 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 185 419 open \$1 \, 1;
+#X obj 185 387 symbol;
+#X text 204 324 open a second soundfile;
+#X text 174 497 You can even modulate one soundfile with another. Depending
+on the audio material you choose \, this can produce real complex sounds.
+;
+#X connect 1 0 4 0;
+#X connect 1 1 11 0;
+#X connect 2 0 11 0;
+#X connect 3 0 2 0;
+#X connect 4 0 7 0;
+#X connect 4 0 7 1;
+#X connect 5 0 4 1;
+#X connect 6 0 5 0;
+#X connect 8 0 1 0;
+#X connect 11 0 8 0;
+#X connect 14 0 17 0;
+#X connect 14 1 21 0;
+#X connect 15 0 21 0;
+#X connect 16 0 15 0;
+#X connect 17 0 18 0;
+#X connect 17 0 18 1;
+#X connect 19 0 14 0;
+#X connect 21 0 19 0;
+#X connect 22 0 17 1;
+#X connect 22 1 26 0;
+#X connect 23 0 26 0;
+#X connect 24 0 23 0;
+#X connect 25 0 22 0;
+#X connect 26 0 25 0;

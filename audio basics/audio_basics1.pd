@@ -1,0 +1,66 @@
+#N canvas 873 78 559 668 10;
+#X obj 34 381 osc~ 440;
+#X obj 74 431 +~ 2;
+#X obj 34 431 *~ 3;
+#X obj 114 431 osc~;
+#X obj 35 151 osc~;
+#X text 161 127 Objects with this ´~´ symbol at the end are dealing
+with audio signals \; They process a continuous stream of numbers with
+an interval time specified by your samplerate \; By default this interval
+is 44100 numbers per second. (These numbers are referred to as samples.)
+;
+#X obj 105 276 sig~;
+#X obj 35 276 unsig~;
+#X floatatom 35 307 5 0 0 0 - - -;
+#X obj 35 246 osc~ 1;
+#X obj 98 146 cnv 15 20 20 empty empty ~ 0 12 0 40 -262144 -66577 0
+;
+#X text 164 260 Audio in/outlets are filled/dark \, and the cords that
+connect them are a bit thicker \; You can´t connect them to non-audio
+in/outlets directly \, but conversion is possible.;
+#X floatatom 105 246 5 0 0 0 - - -;
+#X obj 105 306 *~;
+#X text 168 387 You can connect the same signal outlet to as many signal
+inlets as you like. In most cases \, unlike with messages \, you can
+just ignore the execution order. There is no [trigger] object needed
+for audio.;
+#X obj 34 575 unsig~;
+#X floatatom 34 610 5 0 0 0 - - -;
+#X floatatom 84 504 5 0 0 0 - - -;
+#X floatatom 134 504 5 0 0 0 - - -;
+#X floatatom 34 504 5 0 0 0 - - -;
+#X obj 34 533 sig~ 1;
+#X obj 84 533 sig~ 5;
+#X obj 134 533 sig~ 10;
+#X obj 7 218 cnv 1 540 1 empty empty empty 20 12 0 14 -1 -66577 0;
+#X obj 7 108 cnv 1 540 1 empty empty empty 20 12 0 14 -1 -66577 0;
+#X obj 7 348 cnv 1 540 1 empty empty empty 20 12 0 14 -1 -66577 0;
+#X obj 7 478 cnv 1 540 1 empty empty empty 20 12 0 14 -1 -66577 0;
+#X obj 7 648 cnv 1 540 1 empty empty empty 20 12 0 14 -1 -66577 0;
+#X text 168 561 When several signal connections all come into the same
+signal inlet \, this is also fine. They are implicitly summed together.
+;
+#X obj 62 75 s pd;
+#X msg 35 39 dsp 1;
+#X msg 85 39 dsp 0;
+#X text 163 39 If you want to do things with audio in Pd \, you have
+to turn on DSP (digital signal processing). You can do this from you
+console window \, the media menu \, or even from within your patch.
+;
+#X obj 7 18 cnv 1 540 1 empty empty empty 20 12 0 14 -1 -66577 0;
+#X connect 0 0 2 0;
+#X connect 0 0 1 0;
+#X connect 0 0 3 0;
+#X connect 6 0 13 0;
+#X connect 7 0 8 0;
+#X connect 9 0 7 0;
+#X connect 12 0 6 0;
+#X connect 15 0 16 0;
+#X connect 17 0 21 0;
+#X connect 18 0 22 0;
+#X connect 19 0 20 0;
+#X connect 20 0 15 0;
+#X connect 21 0 15 0;
+#X connect 22 0 15 0;
+#X connect 30 0 29 0;
+#X connect 31 0 29 0;
