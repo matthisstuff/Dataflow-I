@@ -1,16 +1,27 @@
-#N canvas 296 217 781 415 10;
-#X obj 552 181 arduino;
+#N canvas 38 58 787 359 10;
+#X obj 552 184 arduino;
 #X msg 627 161 devices;
 #X obj 552 161 r arduinoIn;
-#X obj 552 201 s arduinoOut;
+#X obj 552 206 s arduinoOut;
 #X msg 724 161 open 2;
 #X obj 322 2 arduino_setup;
 #X obj 322 157 s arduinoIn;
-#X obj 551 241 print;
-#X obj 597 221 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 552 247 print;
+#X obj 598 227 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 551 221 spigot;
+#X obj 552 227 spigot;
 #X msg 681 161 close;
+#X obj 148 13 digout;
+#X text 207 30 [digout];
+#X obj 149 73 digin;
+#X text 210 90 [digin];
+#X obj 36 74 ain;
+#X text 99 89 [ain];
+#X obj 36 13 pwm;
+#X text 101 32 [pwm];
+#X obj 35 135 servo;
+#X text 99 154 [servo];
+#X text 35 198 Value ranges are always between 0 and 1!;
 #X connect 0 0 3 0;
 #X connect 0 0 9 0;
 #X connect 1 0 0 0;
