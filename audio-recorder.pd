@@ -1,4 +1,4 @@
-#N canvas 361 223 604 351 16;
+#N canvas 1298 41 733 471 16;
 #X obj -40 195 adc~ 1;
 #X obj 102 104 bng 15 250 50 0 empty empty record 20 7 0 10 -262144
 -1 -1;
@@ -20,6 +20,21 @@
 ;
 #X text 211 208 The \$0 will be replaced \; with a unique number.;
 #X obj -46 41 inlet play;
+#X obj 167 314 savepanel;
+#X obj 167 104 bng 15 250 50 0 empty empty save 20 7 0 10 -262144 -1
+-1;
+#X obj 167 404 soundfiler;
+#X msg 167 375 write -aiff \$1 \$2-recording;
+#X obj 167 345 pack s \$0;
+#X obj -130 316 openpanel;
+#X msg -130 376 read -resize \$1 \$2-recording;
+#X obj -130 346 pack s \$0;
+#X obj 167 123 bng 15 250 50 0 empty empty open 20 7 0 10 -262144 -1
+-1;
+#X text 280 403 The [soundfiler] can be used \; to read/write audio
+files;
+#X text 286 344 save audio file;
+#X text -16 346 load audio file;
 #X connect 0 0 13 0;
 #X connect 1 0 13 0;
 #X connect 2 0 10 0;
@@ -32,4 +47,12 @@
 #X connect 14 0 7 0;
 #X connect 14 1 5 0;
 #X connect 17 0 14 0;
+#X connect 18 0 22 0;
+#X connect 19 0 18 0;
+#X connect 21 0 20 0;
+#X connect 22 0 21 0;
+#X connect 23 0 25 0;
+#X connect 24 0 20 0;
+#X connect 25 0 24 0;
+#X connect 26 0 23 0;
 #X coords 0 -1 1 1 140 85 2 100 100;
